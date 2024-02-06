@@ -1,0 +1,1 @@
+This blog is a MERN app (actually it's using Mongoose instead of Mongo) that I've created to cronicle my travels. 
