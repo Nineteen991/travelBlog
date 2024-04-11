@@ -8,15 +8,16 @@
 .hero-desc
   margin-bottom: 5rem
   transform: skewY(-10deg)
+  color: $mint-complement
   
-.hero-title .hero-tagline
+.hero-title, .hero-tagline
   margin: 0 auto 
   white-space: nowrap
 
 .hero-title
   font-size: 5rem
   text-transform: uppercase
-  text-shadow: .03em .03em $mint, .05em .05em $whitish-blue
+  text-shadow: .03em .03em $mint, .05em .05em $mint-tetradic-1
   animation: slide-from-left $animation-duration cubic-bezier(0.250, 0.460, 0.450, 0.940) both
 
   @keyframes slide-from-left
@@ -30,11 +31,11 @@
   display: flex
   align-items: center
 
-  &:before &:after
+  &:before, &:after
     content: ''
     display: block
     height: 0.125em
-    background-color: $whitish-blue
+    background-color: $mint-tetradic-1
     animation-duration: $animation-duration
     animation-timing-function: linear
   
@@ -43,10 +44,10 @@
   &:after
     margin-left:  0.5em
   
-  &--left
+  &.left
     justify-content: flex-end
 
-  &--left:after &--right:before
+  &.left:after, &.right:before
     width: 100%
     animation-name: scale-to-100-percent
     
@@ -56,7 +57,7 @@
       100%
         width: 100%
   
-  &--left:before, &--right:after 
+  &.left:before, &.right:after 
     width: $line-min-width
     animation-name: scale-to-line-min-width
     
